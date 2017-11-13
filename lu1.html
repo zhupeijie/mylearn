@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试鲁筛选功能</title>
+    <script src="jquery-1.8.3.min.js"></script>
+</head>
+<style>
+    ul li{
+        display: block;
+        float: left;
+        margin: 0 5px;
+    }
+    a{
+        text-decoration:none
+    }
+    .product_series_checked,.product_type_checked{
+        background-color: #abc;
+        color: red;
+    }
+</style>
+<body>
+<div>
+    产品系列
+    <ul class="product_series">
+        <li><a href="javascript:void(0)" class="series_check product_series_checked" data_series="1" ischecked="1">蜜蜂堂</a></li>
+        <li><a href="javascript:void(0)" class="series_check" data_series="2" ischecked="0">马蜂堂</a></li>
+        <li><a href="javascript:void(0)" class="series_check" data_series="3" ischecked="1">黄蜂堂</a></li>
+    </ul>
+</div>
+<div style="clear: both"></div>
+<div>
+    产品类型
+    <ul class="product_type">
+        <li><a href="javascript:void(0)" class="type_check product_type_checked" data_type="1" ischecked="1">饮品</a></li>
+        <li><a href="javascript:void(0)" class="type_check" data_type="2" ischecked="0">糕点</a></li>
+        <li><a href="javascript:void(0)" class="type_check" data_type="3" ischecked="0">护肤品</a></li>
+    </ul>
+</div>
+<div style="clear: both"></div>
+<div>
+    <ul>
+        <li>
+            <span></span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
