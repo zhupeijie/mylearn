@@ -1,4 +1,67 @@
 <?php
+
+
+ function fib_interation ($n)  
+    {  
+        $fib = array(); // 定义fibonacci数组  
+          
+        if ($n < 0) {  
+            return 0;  
+        }  
+          
+        for ($fib[0] = 0, $fib[1] = 1, $i = 2; $i <= $n; $i ++) {  
+            $fib[$i] = $fib[$i - 1] + $fib[$i - 2];  
+        }  
+          
+        return $fib[$n];  
+    }  
+  
+    /** 
+     * Description:递归方法获取fibonacci第n项数值 
+     * 
+     * @param int $n             
+     * @return int 
+     */  
+     function fib_recursive ($n)  
+    {  
+        if ($n <= 0) {  
+            return 0;  
+        } elseif ($n == 1) {  
+            return 1;  
+        } else {  
+            return self::fib_recursive($n - 1) + self::fib_recursive($n - 2);  
+        }  
+    }  
+    for ($i=0; $i < 5; $i++) { 
+        print_r(fib_interation($i));
+        echo "\n";
+        # code...
+    }
+    die;
+
+
+ function  f($a)
+ {
+    return  $a<2 ? 1 : f($a-1) + f ($a-2);
+ }
+  121393
+ print_r(f(25));die;
+
+// echo 'aaa';die;
+
+$a = 0;
+$b = 1;
+$c = 0;
+for ($i=0; $i <= 50; $i = $i+2) { 
+    $c = $a+$b;
+    $a = $b;
+    $b=$c;
+}
+print_r($b);die;
+
+
+
+
 /**
  * Created by PhpStorm.
  * User: zpj
